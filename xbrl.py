@@ -25,7 +25,6 @@ def get_full_xbrl_data(df):
     try:
         length = len(df)
         for index, row in tqdm(df.iterrows(), total=length, desc=f"Digging through XBRL data", leave=True):
-            tqdm.write(f"Processing file: {index}/{length}")
             file_url = row['File Name']
             file_url = 'https://www.sec.gov/Archives/' + file_url
 
